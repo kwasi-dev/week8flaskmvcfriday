@@ -12,6 +12,10 @@ def init():
     initialize()
     return jsonify(message='db initialized!')
 
+@index_views.route('/test', methods=['GET'])
+def test():
+    return jsonify(message='you have hit the test endpoint!')
+
 @index_views.route('/health', methods=['GET'])
 def health_check():
     return jsonify({'status':'healthy'})
